@@ -23,6 +23,9 @@ public class JavaMainClass {
         }else{
             System.out.println("El n° "+sdate+" no se encuentra en la lista");
         }
+        simpleList.removeStart();//eliminar el primer número de la lista
+        System.out.println("List\n"
+                + simpleList.listSimple());
     }
     
 }
