@@ -23,7 +23,14 @@ public class SimpleList {
         }
     }
     
-    
+    public void addEnd(int date){
+        if (isEmpty()) {
+            start = end = new Node(date);
+        }else{
+            end.setNext(new Node(date));
+            end = end.getNext();
+        }
+    }
 
     public String listSimple() {
         String list = "";

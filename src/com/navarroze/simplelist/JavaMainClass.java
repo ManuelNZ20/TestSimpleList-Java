@@ -12,6 +12,8 @@ public class JavaMainClass {
         simpleList.addStart(3);
         simpleList.addStart(4);
         simpleList.addStart(5);
+        simpleList.addEnd(7);
+        simpleList.addEnd(8);
         System.out.println("List\n"
                 + simpleList.listSimple());
     }
