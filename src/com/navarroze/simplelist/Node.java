@@ -1,13 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.navarroze.simplelist;
 
-/**
- *
- * @author MANUEL
- */
 public class Node {
+    private int date;
+    private Node next;
+    
+    public Node(int date){
+        this(date, null);
+    }
+    
+    public Node(int date,Node next){
+        this.date = date;
+        this.next = next;
+    }
+
+    public int getDate() {
+        return date;
+    }
+
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+    
     
 }

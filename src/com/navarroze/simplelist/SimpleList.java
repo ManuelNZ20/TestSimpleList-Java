@@ -1,13 +1,37 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.navarroze.simplelist;
 
-/**
- *
- * @author MANUEL
- */
 public class SimpleList {
+
+    private Node start;
+    private Node end;
+
+    public SimpleList() {
+        start = end = null;
+    }
+
+    public boolean isEmpty() {
+        return start == null;
+    }
     
+    public void addStart(int date){
+        if (isEmpty()) {
+            start = end = new Node(date);
+        }else{
+            Node newnode = new Node(date);
+            newnode.setNext(start);
+            start = newnode;
+        }
+    }
+    
+    
+
+    public String listSimple() {
+        String list = "";
+        for (Node n = start; n != null;) {
+            list += (n.getNext() != null) ? n.getDate() + " - " : n.getDate();
+            n = n.getNext();
+        }
+        return list;
+    }
+
 }
