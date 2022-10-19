@@ -27,6 +27,21 @@ public class JavaMainClass {
         simpleList.removeEnd();//eliminar el ultimo nodo de la lista
         System.out.println("List\n"
                 + simpleList.listSimple());
+        simpleList.addStart(1);
+        simpleList.addStart(2);
+        simpleList.addStart(3);
+        simpleList.addStart(4);
+        simpleList.addStart(5);
+        simpleList.addEnd(5);
+        simpleList.addEnd(7);
+        simpleList.addEnd(8);
+        simpleList.addEnd(5);
+        System.out.println("List\n"
+                + simpleList.listSimple());
+        simpleList.remove(5);
+        System.out.println("List\n"
+                + simpleList.listSimple());
+        
     }
     
 }
