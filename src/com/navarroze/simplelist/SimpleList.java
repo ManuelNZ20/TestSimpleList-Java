@@ -41,6 +41,22 @@ public class SimpleList {
             tmp.setNext(null);
         }
     }
+    
+    public void removeEnd()
+    {
+        if (start==end) {
+            start = end = null;
+        }else{
+            Node previous = null;
+            for(Node n=start;n!=end;){
+                previous = n;
+                n = n.getNext();
+            }
+            end = previous;
+            end.setNext(null);
+        }
+    }
+    
     public Node search(int date){
         for(Node i=start;i!=null;i=i.getNext()){
             if (i.getDate()==date) {
