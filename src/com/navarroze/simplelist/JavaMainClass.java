@@ -41,6 +41,7 @@ public class JavaMainClass {
         simpleList.remove(5);
         System.out.println("List\n"
                 + simpleList.listSimple());
+        //Orden ascendente
         SimpleList newsimple = new SimpleList();
         newsimple.addNode(85);
         newsimple.addNode(53);
@@ -51,6 +52,18 @@ public class JavaMainClass {
         newsimple.addNode(105);
         System.out.println("New ordered list\n"
                 + newsimple.listSimple());
+        //Orden descendente
+        SimpleList simpleDesc = new SimpleList();
+        simpleDesc.addNodeDesc(5);
+        simpleDesc.addNodeDesc(9);
+        simpleDesc.addNodeDesc(1);
+        simpleDesc.addNodeDesc(10);
+        simpleDesc.addNodeDesc(-6);
+        simpleDesc.addNodeDesc(52);
+        simpleDesc.addNodeDesc(49);
+        System.out.println("New ordered list\n"
+                + simpleDesc.listSimple());
+        
         
     }
     

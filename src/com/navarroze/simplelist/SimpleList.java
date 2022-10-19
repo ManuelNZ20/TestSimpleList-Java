@@ -96,7 +96,7 @@ public class SimpleList {
             newnode.setNext(start);
             start = newnode;
         }else{
-            boolean add = false,enc = false;
+            boolean enc = false;
             Node current = start,previous = null;
             Node newnode = new Node(date);
             while(!enc&&current!=null){
@@ -121,6 +121,38 @@ public class SimpleList {
         }
     }
 
+    
+    public void addNodeDesc(int date){
+        Node newnode = new Node(date);
+        if (isEmpty()) {
+            addStart(date);
+        }else if(date>start.getDate()){
+            newnode.setNext(start);
+            start = newnode;
+        }else{
+            Node current = start,previous = null;
+            boolean enc = false;
+            while(current!=null&&!enc){
+                if (date>current.getDate()) {
+                    if (previous==null) {
+                        newnode.setNext(start);
+                        start = newnode;
+                    }else{
+                        previous.setNext(newnode);
+                        newnode.setNext(current);
+                    }
+                    enc = true;
+                }else{
+                    previous = current;
+                    current = current.getNext();
+                }
+            }
+            if (!enc) {
+                end.setNext(newnode);
+                end = end.getNext();
+            }
+        }
+    }
     public Node search(int date) {
         for (Node i = start; i != null; i = i.getNext()) {
             if (i.getDate() == date) {
