@@ -31,6 +31,17 @@ public class SimpleList {
             end = end.getNext();
         }
     }
+    
+    public Node search(int date){
+        for(Node i=start;i!=null;i=i.getNext()){
+            if (i.getDate()==date) {
+                return i;
+            }
+        }
+        return null;
+    }
+    
+    
 
     public String listSimple() {
         String list = "";

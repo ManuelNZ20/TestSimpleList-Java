@@ -16,6 +16,13 @@ public class JavaMainClass {
         simpleList.addEnd(8);
         System.out.println("List\n"
                 + simpleList.listSimple());
+        Node d;
+        final int sdate = 11;
+        if ((d = simpleList.search(sdate))!=null) {
+            System.out.println("El n° "+d.getDate()+" que esta buscando si existe en la lista");
+        }else{
+            System.out.println("El n° "+sdate+" no se encuentra en la lista");
+        }
     }
     
 }
