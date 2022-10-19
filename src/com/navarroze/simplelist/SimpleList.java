@@ -74,7 +74,7 @@ public class SimpleList {
                         previous.setNext(null);
                         end = previous;
                         aux.setNext(null);
-                    }else{
+                    } else {
                         aux = current;
                         current = current.getNext();
                         previous.setNext(current);
@@ -84,6 +84,39 @@ public class SimpleList {
             } else {
                 previous = current;
                 current = current.getNext();
+            }
+        }
+    }
+
+    public void addNode(int date) {
+        if (isEmpty()) {
+            start = end = new Node(date);
+        }else if(date < start.getDate()){
+            Node newnode = new Node(date);
+            newnode.setNext(start);
+            start = newnode;
+        }else{
+            boolean add = false,enc = false;
+            Node current = start,previous = null;
+            Node newnode = new Node(date);
+            while(!enc&&current!=null){
+                if (date < current.getDate()) {
+                    if (previous==null) {
+                        newnode.setNext(current);
+                        start = newnode;
+                    }else{
+                        previous.setNext(newnode);
+                        newnode.setNext(current);
+                    }
+                    enc = true;
+                }else{
+                    previous = current;
+                    current = current.getNext();
+                }
+            }
+            if (!enc) {
+                end.setNext(newnode);
+                end = end.getNext();
             }
         }
     }
@@ -100,7 +133,7 @@ public class SimpleList {
     public String listSimple() {
         String list = "";
         for (Node n = start; n != null;) {
-            list += (n.getNext() != null) ? n.getDate() + " - " : n.getDate();
+            list += (n.getNext() != null) ? n.getDate() + " -> " : n.getDate();
             n = n.getNext();
         }
         return list;

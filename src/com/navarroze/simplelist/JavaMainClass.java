@@ -41,6 +41,16 @@ public class JavaMainClass {
         simpleList.remove(5);
         System.out.println("List\n"
                 + simpleList.listSimple());
+        SimpleList newsimple = new SimpleList();
+        newsimple.addNode(85);
+        newsimple.addNode(53);
+        newsimple.addNode(15);
+        newsimple.addNode(50);
+        newsimple.addNode(-5);
+        newsimple.addNode(-15);
+        newsimple.addNode(105);
+        System.out.println("New ordered list\n"
+                + newsimple.listSimple());
         
     }
     
