@@ -1,4 +1,4 @@
-<h1>simplelist-methodtotal-java</h1>
+<h1>SimpleList</h1>
 <p align="">
 Simple list project with node list method, such as add to start and end, find, remove from start, end and any node within the list, as well as add nodes in ascending and descending order.
 </p>
